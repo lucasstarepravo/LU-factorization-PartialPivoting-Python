@@ -29,10 +29,3 @@ def ut_solve(A,b):
         b[i] = b[i] - np.matmul(A[i,i+1:],b[i+1:])   # Solving upper triangular
         b[i] = b[i]/A[i,i]                           # Dividing by diagonal entry
     return b
-
-
-A, P = lu_pp(A)
-b = lt_solve(A,b,P)
-b = ut_solve(A,b)
-print('this is b')
-print(b)
